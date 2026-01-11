@@ -1,4 +1,4 @@
-# Vensera Tech - Digital Transformation & Data Solutions Website
+# Sunnivaera - Digital Transformation & Data Solutions Website
 
 A modern, professional website for a startup software company specializing in digital transformation, data warehousing, data lakes, advanced reporting, and financial analytics.
 
@@ -132,4 +132,4 @@ Each service includes:
 
 ---
 
-Built with ❤️ for Vensera Tech - Transforming Data Into Insights
+Built with ❤️ for Sunnivaera - Transforming Data Into Insights

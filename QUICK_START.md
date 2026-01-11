@@ -1,4 +1,4 @@
-# 🚀 Quick Start - Vensera Tech Website
+# 🚀 Quick Start - Sunnivaera Website
 
 ## ⚡ Get Started in 30 Seconds
 
