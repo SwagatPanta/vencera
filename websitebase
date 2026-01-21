@@ -1,0 +1,7 @@
+Data engineering, Advance  Data Analytics and Modeling, present data in dasbaorad
+Data engineerign supports both real timeand batch data processing ..
+Domin: healthcare, fintech, telicome
+data processing big data technologies stacks in iceberg on hdfs and iceberg on minio
+Based on your business requirements and long-term technology strategy, we recommend evaluating both Iceberg on HDFS and Iceberg on MinIO for the Client Team Data Lakehouse.
+Iceberg on HDFS is best suited for organizations with an existing, mature Hadoop ecosystem, stable batch-heavy workloads, and in-house Hadoop expertise where infrastructure is already sunk cost.
+However, for most modern analytics, streaming, and scalable use cases, Iceberg on MinIO provides a more cloud-native, cost-efficient, and operationally simpler architecture, significantly reducing DevOps effort, infrastructure overhead, and long-term operational risk.

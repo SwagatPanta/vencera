@@ -21,14 +21,55 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Transform Data Into Intelligence</h1>
-            <p>Enterprise-grade data engineering, advanced analytics, and real-time dashboards for healthcare, fintech, and telecom</p>
-            <button class="cta-button">Get Started</button>
+    <!-- Image Carousel Section (Hero) -->
+    <section class="carousel-section" id="home">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-slide fade" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&h=900&fit=crop') center/cover;">
+                    <div class="slide-content hero-slide">
+                        <h1>Transform Data Into Intelligence</h1>
+                        <p>Enterprise-grade data engineering, advanced analytics, and real-time dashboards for healthcare, fintech, and telecom</p>
+                        <button class="cta-button">Get Started</button>
+                    </div>
+                </div>
+                <div class="carousel-slide fade" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&h=900&fit=crop') center/cover;">
+                    <div class="slide-content">
+                        <div class="slide-icon">⚙️</div>
+                        <h3>Data Engineering</h3>
+                        <p>Build scalable data pipelines handling real-time and batch processing at scale</p>
+                    </div>
+                </div>
+                <div class="carousel-slide fade" style="background: linear-gradient(135deg, rgba(52, 211, 153, 0.85) 0%, rgba(16, 185, 129, 0.85) 100%), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&h=900&fit=crop') center/cover;">
+                    <div class="slide-content">
+                        <div class="slide-icon">📊</div>
+                        <h3>Data Analytics</h3>
+                        <p>Extract deep insights with advanced modeling and statistical analysis</p>
+                    </div>
+                </div>
+                <div class="carousel-slide fade" style="background: linear-gradient(135deg, rgba(79, 172, 254, 0.85) 0%, rgba(0, 242, 254, 0.85) 100%), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&h=900&fit=crop') center/cover;">
+                    <div class="slide-content">
+                        <div class="slide-icon">📈</div>
+                        <h3>Dashboard Solutions</h3>
+                        <p>Present data beautifully with interactive real-time dashboards</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <span class="indicator" onclick="currentSlide(1)"></span>
+                <span class="indicator" onclick="currentSlide(2)"></span>
+                <span class="indicator" onclick="currentSlide(3)"></span>
+                <span class="indicator" onclick="currentSlide(4)"></span>
+            </div>
         </div>
-    </header>
+    </section>
 
     <!-- Services Section -->
     <section id="services" class="services">
@@ -164,7 +205,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p>Email: hello@sunnivaera.io</p>
+                    <p>Email: sunnivaeratech@gmail.com</p>
                     <p>Phone: +1 (555) 123-4567</p>
                 </div>
             </div>
@@ -182,6 +223,25 @@
         </div>
     </div>
 
+    <!-- Success Message Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-content">
+            <div class="modal-header">
+                <div class="icon">✓</div>
+                <h3>Message Sent Successfully!</h3>
+            </div>
+            <div class="modal-body">
+                <p>Thank you for reaching out to us. We appreciate your interest and will get back to you as soon as possible.</p>
+                <p><strong>Email:</strong> sunnivaeratech@gmail.com</p>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <button class="submit-btn" onclick="closeSuccessModal()" style="cursor: pointer;">Close</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
+

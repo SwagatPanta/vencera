@@ -1,3 +1,46 @@
+// ==================== Carousel Functions ====================
+
+let currentSlideIndex = 1;
+let autoSlideTimer;
+
+function showSlides(n) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+    
+    if (n > slides.length) {
+        currentSlideIndex = 1;
+    }
+    if (n < 1) {
+        currentSlideIndex = slides.length;
+    }
+    
+    slides.forEach(slide => slide.classList.remove('fade'));
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    
+    slides[currentSlideIndex - 1].classList.add('fade');
+    indicators[currentSlideIndex - 1].classList.add('active');
+}
+
+function changeSlide(n) {
+    clearTimeout(autoSlideTimer);
+    showSlides(currentSlideIndex += n);
+    autoSlide();
+}
+
+function currentSlide(n) {
+    clearTimeout(autoSlideTimer);
+    showSlides(currentSlideIndex = n);
+    autoSlide();
+}
+
+function autoSlide() {
+    autoSlideTimer = setTimeout(() => {
+        currentSlideIndex++;
+        showSlides(currentSlideIndex);
+        autoSlide();
+    }, 5000); // Change slide every 5 seconds
+}
+
 // ==================== Service Data ====================
 const serviceData = {
     'Data Engineering': {
@@ -95,9 +138,19 @@ function closeServiceModal() {
     document.body.style.overflow = 'auto';
 }
 
+function closeSuccessModal() {
+    const modal = document.getElementById('successModal');
+    modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
+
 // ==================== Event Listeners ====================
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize carousel
+    showSlides(currentSlideIndex);
+    autoSlide();
+
     // Close modal when clicking outside
     const modal = document.getElementById('serviceModal');
     window.addEventListener('click', function(event) {
@@ -111,7 +164,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Show success modal
+            const successModal = document.getElementById('successModal');
+            successModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            
+            // Reset form
             contactForm.reset();
         });
     }
