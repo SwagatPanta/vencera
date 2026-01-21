@@ -67,6 +67,11 @@ body {
 
 .nav-links a:hover { color: var(--primary-color); border-bottom: 3px solid var(--primary-color); }
 
+.nav-icon {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
 /* ==================== Hero Section ==================== */
 .hero {
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--card-bg) 100%);
@@ -771,6 +776,7 @@ body {
         font-size: 0.9rem;
     }
 }
+
 
 
 
