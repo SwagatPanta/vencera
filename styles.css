@@ -130,7 +130,7 @@ body {
     background: white;
 }
 
-.services h2, .domains h2, .tech-stack h2, .why-us h2 { font-size: 4rem; text-align: center; margin-bottom: 3rem; color: var(--primary-color);
+.services h2, .domains h2, .tech-stack h2, .why-us h2 { font-size: 4rem; text-align: center; margin-bottom: 3rem; color: #2d3748;
 }
 
 .services-grid,
@@ -778,6 +778,8 @@ body {
         font-size: 0.9rem;
     }
 }
+
+
 
 
 
